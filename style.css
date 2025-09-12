@@ -1,0 +1,51 @@
+/* dark theme */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#10b981;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{background:linear-gradient(180deg,#071029 0%, #071827 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+
+    .calculator{
+      width:360px;
+      max-width:96vw;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042027}
+    .title{color:var(--muted);font-size:14px}
+
+    .screen{
+      background:var(--glass);
+      padding:14px;border-radius:10px;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;min-height:86px;align-items:flex-end
+    }
+    .history{font-size:13px;color:var(--muted);opacity:0.9;word-break:break-all;max-width:100%;}
+    .display{font-size:28px;color:#e6eef6;font-weight:600}
+
+    .pad{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+    }
+    button{
+      height:56px;border-radius:10px;border:0;font-size:18px;background:#081326;color:#dbeafe;cursor:pointer;outline:none;box-shadow:0 6px 12px rgba(2,6,23,0.6);
+    }
+    button.operator{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+    button.equal{background:linear-gradient(180deg,var(--accent),#06b6d4);color:#042027;font-weight:700}
+    button.span-2{grid-column:span 2}
+    button:active{transform:translateY(1px)}
+
+    /* responsive tweaks */
+    @media (max-width:420px){.calculator{padding:12px}.display{font-size:22px}button{height:52px;font-size:16px}}
+
+    /* small helper text */
+    .help{margin-top:10px;color:var(--muted);font-size:13px;text-align:center}
+
